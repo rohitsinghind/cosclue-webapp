@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 export default function OurWork() {
 
   const navigate = useNavigate();
+  const mediaQuery = window.matchMedia("(max-width: 550px)");
 
   return (
     <>
@@ -17,9 +18,12 @@ export default function OurWork() {
         <Box sx={styles.center}>
           <Box>
             <Typography sx={styles.text1}>The Cosclue Way</Typography>
+            {mediaQuery.matches?
+          <img style={styles.helpImg2} src={require("../../assets/images/work.jpg")} alt="" />:""}
             <Typography sx={styles.bodyText}>At Arcurve, we solve real problems for our clients by following the Arcurve Way at each stage of an engagement.</Typography>
           </Box>
-          <img style={styles.helpImg} src={require("../../assets/images/work.jpg")} alt="" />
+          {mediaQuery.matches?"":
+          <img style={styles.helpImg} src={require("../../assets/images/work.jpg")} alt="" />}
         </Box>
       </Container>
       <Box sx={styles.chatBg}>

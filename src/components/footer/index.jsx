@@ -13,14 +13,17 @@ import { styles } from './styles';
 
 
 export default function Footer() {
+
+  const mediaQuery = window.matchMedia("(max-width: 550px)");
+
   return (
     <Toolbar sx={styles.toolbar}>
       <Container maxWidth="xl" sx={styles.innerBox}>
-      <img style={styles.logo} src={require("../../assets/images/logo.png")} alt="" />
+      <img style={mediaQuery.matches? styles.logo2:styles.logo} src={require("../../assets/images/logo.png")} alt="" />
         <Typography
           sx={styles.footerTxt}
         >&copy;2022 Cosclue</Typography>
-        <Box style={styles.box}>
+        <Box style={mediaQuery.matches? styles.box2:styles.box}>
           <LinkedInIcon sx={styles.icon}/>
           <TwitterIcon sx={styles.icon}/>
           <EmailIcon sx={styles.icon}/>

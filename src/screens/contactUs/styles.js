@@ -11,17 +11,27 @@ export const styles = {
       justifyContent: "center",
       alignItems:"center", 
       mt:"150px",
-      mb:"100px"
+      mb:"100px",
+      '@media (max-width: 550px)': {
+        mt:"25px",
+        mb:"15px",
+      },
     },
       text1: {
           fontFamily: "Open Sans, sans-serif",
           fontSize:"45px",
           color:"#20c9da",
-          fontWeight:"bold"
+          fontWeight:"bold",
+          '@media (max-width: 550px)': {
+            fontSize:"30px",
+          },
         },
         textfield: {
             my:"10px",
-            width:"350px"
+            width:"350px",
+            '@media (max-width: 550px)': {
+              width:"300px",
+            },
         },
         helpImg:{
           width:"50%"
@@ -35,6 +45,7 @@ export const styles = {
           justifyContent: "center",
           alignItems:"center",
           py:"30px",
-          backgroundColor:"#f1f1f1" 
+          backgroundColor:"#f1f1f1" ,
+         
         }
   }

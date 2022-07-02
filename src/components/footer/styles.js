@@ -13,11 +13,18 @@ export const styles = {
         width: "auto",
         height: "60px",
     },
+    logo2: { 
+      width: "auto",
+      height: "30px",
+  },
     footerTxt:{
         fontFamily: "Open Sans, sans-serif",
         fontSize:"20px",
         display:"flex", 
         alignItems:"center", 
+        '@media (max-width: 550px)': {
+          fontSize:"14px",
+        },
     },
     main: {
       display: "flex",
@@ -30,7 +37,13 @@ export const styles = {
       alignItems: "center",
       justifyContent: "flex-end",
       width:"150px",
-      color:"#006873"
+      color:"#006873",
+    },
+    box2: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-end",
+      color:"#006873",
     },
     footer: {
       display: "flex",
@@ -40,7 +53,10 @@ export const styles = {
     },
     icon:{
       ml:"15px",
-      cursor:"pointer"
+      cursor:"pointer",
+      '@media (max-width: 550px)': {
+        ml:"10px",
+      },
     }
   };
   

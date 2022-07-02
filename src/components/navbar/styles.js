@@ -9,6 +9,9 @@ export const styles = {
           right:"50px",
           display:"flex", 
           alignItems:"center", 
+          '@media (max-width: 550px)': {
+            right:"5px",
+          },
         },
         navBtn:{
           color:"#1b68b6",
